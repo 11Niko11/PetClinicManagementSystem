@@ -1,6 +1,9 @@
 package com.sda.nicolaicadanstefan.petclinic.service;
 
+import com.sda.nicolaicadanstefan.petclinic.model.Vet;
 import com.sda.nicolaicadanstefan.petclinic.repository.VetRepository;
+
+import java.util.List;
 
 public class VetServiceImpl implements VetService {
     private final VetRepository vetRepository;
@@ -24,5 +27,9 @@ public class VetServiceImpl implements VetService {
             throw new IllegalArgumentException("Speciality is INVALID");
         }
         vetRepository.createVet(firstName, lastName, address, speciality);
+    }
+
+    public List<Vet> getAllVets(){
+        return vetRepository.getAllVets();
     }
 }
