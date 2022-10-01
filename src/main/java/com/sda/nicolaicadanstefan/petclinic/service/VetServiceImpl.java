@@ -4,6 +4,7 @@ import com.sda.nicolaicadanstefan.petclinic.model.Vet;
 import com.sda.nicolaicadanstefan.petclinic.repository.VetRepository;
 
 import java.util.List;
+import java.util.Optional;
 
 public class VetServiceImpl implements VetService {
     private final VetRepository vetRepository;
@@ -31,5 +32,10 @@ public class VetServiceImpl implements VetService {
 
     public List<Vet> getAllVets(){
         return vetRepository.getAllVets();
+    }
+
+    @Override
+    public Optional<Vet> findById(int id) {
+        return vetRepository.findById(id);
     }
 }
