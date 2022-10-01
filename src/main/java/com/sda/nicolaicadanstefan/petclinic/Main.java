@@ -1,7 +1,10 @@
 package com.sda.nicolaicadanstefan.petclinic;
 
+import com.sda.nicolaicadanstefan.petclinic.utils.SessionManager;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        SessionManager.getSessionFactory();
+        SessionManager.shutDown();
     }
 }
